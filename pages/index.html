@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Cricket ke Deewane</title>
+    <title>Cricket Fever</title>
+    <meta name="viewport" content="width=device-width" initial-scale=1>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <script src="../libs/angular.min.js"></script>
     <script src="../js/app.js"></script>
@@ -14,14 +15,13 @@
 
 <body ng-app="cricmodule" ng-controller="cricctrl">
     <label for="">Choose Your Player</label>
-    <select>
-        <option value="" selected>MS Dhoni</option>
-        <option value="">Virat Kohli</option>
-        <option value="">Rohit Sharma</option>
-        <option value="">i</option>
+    <select ng-model="playerId">
+        <option value="28081" selected>MS Dhoni</option>
+        <option value="253802">Virat Kohli</option>
+        <option value="235902">Rohit Sharma</option>
     </select>
     <button ng-click="searchByPid()">Check</button>
-    <div ng-show="showIt">
+    <div>
         <ul>
             <li>Name :: {{result.data.fullName}}</li>
             <li>Image :: <img ng-src='{{result.data.imageURL}}'></li>
